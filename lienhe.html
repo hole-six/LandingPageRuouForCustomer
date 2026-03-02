@@ -66,8 +66,8 @@
                     </div>
                     
                     <!-- Mobile Menu Button -->
-                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 hover:bg-primary/10 rounded transition-colors">
-                        <span class="material-symbols-outlined text-3xl text-primary">menu</span>
+                    <button id="menuBtn" class="lg:hidden p-2 hover:bg-primary/10 rounded transition-colors">
+                        <span id="menuIcon" class="material-symbols-outlined text-3xl text-primary">menu</span>
                     </button>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             </nav>
             
             <!-- Mobile Navigation -->
-            <nav class="hidden lg:hidden mt-4 pb-4 border-t border-white/10 pt-4" id="mobile-nav">
+            <nav id="mobileMenu" class="hidden mt-4 pb-4 border-t border-white/10 pt-4">
                 <div class="flex flex-col space-y-3">
                     <a class="hover:text-primary transition-colors py-2 px-4 hover:bg-primary/10 rounded" href="index.html">
                         <span class="material-symbols-outlined text-sm mr-2 align-middle">home</span>
@@ -300,27 +300,27 @@
     </footer>
     <div id="floating-buttons" class="fixed right-4 bottom-10 z-50 flex flex-col space-y-3">
         <button id="toggle-floating"
-            class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:-translate-x-2 transition-transform"
+            class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
             title="Đóng/Mở menu">
             <span class="material-symbols-outlined">menu</span>
         </button>
-        <div id="floating-menu" class="flex flex-col space-y-3">
-            <a class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg hover:-translate-x-2 transition-transform"
-                href="tel:0356781839" title="Gọi: 0356 781 839">
+        <div id="floating-menu" class="hidden flex-col space-y-3">
+            <a class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+                href="tel:0908176387" title="Gọi: 0908 176 387">
                 <span class="material-symbols-outlined">call</span>
             </a>
-            <a class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center shadow-lg hover:-translate-x-2 transition-transform"
-                href="https://zalo.me/0356781839" target="_blank" title="Zalo: 0356 781 839">
+            <a class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+                href="https://zalo.me/0908176387" target="_blank" title="Zalo: 0908 176 387">
                 <img alt="Zalo" class="w-6 h-6"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLgkuNVEqN37yxQ7l9tQ57XNslZR0N132dwjrNlnl8ZFZ_wa-Cl1XGAEEVYFGMTznZ5umKVnOFEy-8O_IMHCwpuO8HLWQG4DDxQutFv6fd3-RRjjaBrRLyd3RyN0KAtOTubO8wOSqjKLVbKfDOngpl43FcM3-2DU2gnVrkmJKY5xS5-4BsMZJkGkjPlwz1B864ATK7RZn0DBehcTHYLeUECBz92gze724-t4TtJB3eGN6gi76N2gV-6k-x9DM-Es1rr9Ax6b4xjlVK" />
             </a>
-            <a class="w-12 h-12 bg-[#1877f2] text-white rounded-full flex items-center justify-center shadow-lg hover:-translate-x-2 transition-transform"
+            <a class="w-12 h-12 bg-[#1877f2] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
                 href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank"
                 title="Facebook: Tuấn">
                 <span class="material-symbols-outlined">chat</span>
             </a>
             <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-                class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center shadow-lg hover:-translate-x-2 transition-transform border border-slate-200"
+                class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform border border-slate-200"
                 title="Lên đầu trang">
                 <span class="material-symbols-outlined">expand_less</span>
             </a>
@@ -328,46 +328,49 @@
     </div>
 
     <script>
-        // Toggle floating buttons
-        const toggleBtn = document.getElementById('toggle-floating');
-        const floatingMenu = document.getElementById('floating-menu');
-        let isOpen = true;
-
-        toggleBtn.addEventListener('click', function () {
-            isOpen = !isOpen;
-            if (isOpen) {
-                floatingMenu.style.display = 'flex';
-                toggleBtn.querySelector('span').textContent = 'menu';
-            } else {
-                floatingMenu.style.display = 'none';
-                toggleBtn.querySelector('span').textContent = 'close';
-            }
-        });
-
-        // Mobile menu toggle function
-        function toggleMobileMenu() {
-            const nav = document.getElementById('mobile-nav');
-            const menuButton = document.querySelector('header button[onclick*="toggleMobileMenu"]');
+        // MOBILE MENU - Đơn giản nhất
+        (function() {
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
             
-            if (nav) {
-                nav.classList.toggle('hidden');
-                
-                // Toggle icon
-                if (menuButton) {
-                    const icon = menuButton.querySelector('span');
-                    if (icon) {
-                        icon.textContent = nav.classList.contains('hidden') ? 'menu' : 'close';
+            if (btn && menu && icon) {
+                btn.onclick = function() {
+                    if (menu.classList.contains('hidden')) {
+                        menu.classList.remove('hidden');
+                        icon.textContent = 'close';
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        menu.classList.add('hidden');
+                        icon.textContent = 'menu';
+                        document.body.style.overflow = '';
                     }
-                }
-                
-                // Prevent body scroll when menu is open
-                if (!nav.classList.contains('hidden')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = '';
-                }
+                };
             }
-        }
+        })();
+        
+        // FLOATING BUTTONS
+        (function() {
+            const toggleBtn = document.getElementById('toggle-floating');
+            const floatingMenu = document.getElementById('floating-menu');
+            const icon = toggleBtn.querySelector('span');
+
+            if (toggleBtn && floatingMenu) {
+                toggleBtn.onclick = function() {
+                    if (floatingMenu.classList.contains('hidden')) {
+                        // Mở menu
+                        floatingMenu.classList.remove('hidden');
+                        floatingMenu.classList.add('flex');
+                        icon.textContent = 'close';
+                    } else {
+                        // Đóng menu
+                        floatingMenu.classList.add('hidden');
+                        floatingMenu.classList.remove('flex');
+                        icon.textContent = 'menu';
+                    }
+                };
+            }
+        })();
     </script>
 
 </body>

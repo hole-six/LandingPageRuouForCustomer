@@ -152,7 +152,7 @@ class Router {
         <button id="toggle-floating" class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg" title="Đóng/Mở menu">
           <span class="material-symbols-outlined">menu</span>
         </button>
-        <div id="floating-menu" class="flex flex-col space-y-4">
+        <div id="floating-menu" class="hidden flex-col space-y-4">
           <a href="https://zalo.me/0356781839" target="_blank" class="w-12 h-12 bg-[#0068ff] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Zalo: 0356 781 839">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg==" alt="zalo">
             </a>
@@ -170,27 +170,6 @@ class Router {
           </a>
         </div>
       </div>
-      <script>
-        // Toggle floating buttons
-        setTimeout(() => {
-          const toggleBtn = document.getElementById('toggle-floating');
-          const floatingMenu = document.getElementById('floating-menu');
-          let isOpen = true;
-
-          if (toggleBtn && floatingMenu) {
-            toggleBtn.addEventListener('click', function() {
-              isOpen = !isOpen;
-              if (isOpen) {
-                floatingMenu.style.display = 'flex';
-                toggleBtn.querySelector('span').textContent = 'menu';
-              } else {
-                floatingMenu.style.display = 'none';
-                toggleBtn.querySelector('span').textContent = 'close';
-              }
-            });
-          }
-        }, 100);
-      </script>
     `;
   }
 
@@ -655,3 +634,138 @@ window.addEventListener('load', () => {
     setTimeout(() => scrollToSection(sectionId), 100);
   }
 });
+
+
+// MOBILE MENU TOGGLE - Đơn giản nhất
+(function initMobileMenu() {
+  function setupMenu() {
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const icon = document.getElementById('menuIcon');
+    
+    if (btn && menu && icon) {
+      // Xóa event cũ nếu có
+      btn.onclick = null;
+      
+      btn.onclick = function() {
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+          icon.textContent = 'close';
+          document.body.style.overflow = 'hidden';
+        } else {
+          menu.classList.add('hidden');
+          icon.textContent = 'menu';
+          document.body.style.overflow = '';
+        }
+      };
+      
+      console.log('✅ Mobile menu initialized');
+    } else {
+      console.log('⏳ Waiting for mobile menu...');
+    }
+  }
+  
+  // Setup ngay lập tức
+  setupMenu();
+  
+  // Setup sau khi DOM load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupMenu);
+  }
+  
+  // Setup lại nhiều lần để đảm bảo
+  setTimeout(setupMenu, 100);
+  setTimeout(setupMenu, 300);
+  setTimeout(setupMenu, 500);
+  setTimeout(setupMenu, 1000);
+  
+  // Quan sát DOM để setup khi element xuất hiện
+  if (typeof MutationObserver !== 'undefined') {
+    const observer = new MutationObserver(() => {
+      const btn = document.getElementById('menuBtn');
+      if (btn) {
+        setupMenu();
+      }
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+})();
+
+// FLOATING BUTTONS TOGGLE - Đơn giản nhất
+(function initFloatingButtons() {
+  function setupFloatingButtons() {
+    const toggleBtn = document.getElementById('toggle-floating');
+    const floatingMenu = document.getElementById('floating-menu');
+    
+    if (toggleBtn && floatingMenu) {
+      const icon = toggleBtn.querySelector('span');
+      
+      // Xóa event cũ nếu có
+      toggleBtn.onclick = null;
+      toggleBtn.ontouchend = null;
+      
+      function toggleMenu(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        if (floatingMenu.classList.contains('hidden')) {
+          // Mở menu
+          floatingMenu.classList.remove('hidden');
+          floatingMenu.classList.add('flex');
+          if (icon) icon.textContent = 'close';
+        } else {
+          // Đóng menu
+          floatingMenu.classList.add('hidden');
+          floatingMenu.classList.remove('flex');
+          if (icon) icon.textContent = 'menu';
+        }
+      }
+      
+      // Hỗ trợ cả click và touch
+      toggleBtn.onclick = toggleMenu;
+      toggleBtn.ontouchend = toggleMenu;
+      
+      console.log('✅ Floating buttons initialized');
+    } else {
+      console.log('⏳ Waiting for floating buttons...');
+    }
+  }
+  
+  // Setup ngay lập tức
+  setupFloatingButtons();
+  
+  // Setup sau khi DOM load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFloatingButtons);
+  }
+  
+  // Setup lại nhiều lần để đảm bảo
+  setTimeout(setupFloatingButtons, 100);
+  setTimeout(setupFloatingButtons, 300);
+  setTimeout(setupFloatingButtons, 500);
+  setTimeout(setupFloatingButtons, 1000);
+  
+  // Setup lại mỗi khi route thay đổi
+  window.addEventListener('popstate', () => {
+    setTimeout(setupFloatingButtons, 300);
+  });
+  
+  // Quan sát DOM để setup khi element xuất hiện
+  if (typeof MutationObserver !== 'undefined') {
+    const observer = new MutationObserver(() => {
+      const toggleBtn = document.getElementById('toggle-floating');
+      if (toggleBtn) {
+        setupFloatingButtons();
+      }
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+})();

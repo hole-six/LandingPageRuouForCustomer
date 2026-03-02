@@ -1,70 +1,111 @@
 // ===== MOBILE ENHANCEMENTS =====
+console.log('🚀 Mobile enhancements script loading...');
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const body = document.body;
-  const menuButton = document.querySelector('[onclick*="toggleMobileMenu"]');
+// Mobile menu toggle - Works for both index.html and lienhe.html
+window.toggleMobileMenu = function() {
+  console.log('🔘 toggleMobileMenu() called');
   
-  console.log('toggleMobileMenu called');
-  console.log('menu:', menu);
-  console.log('menuButton:', menuButton);
+  // Try both possible menu IDs
+  const menu = document.getElementById('mobile-menu') || document.getElementById('mobile-nav');
+  const menuButton = document.querySelector('button[onclick*="toggleMobileMenu"]');
   
-  if (menu) {
-    const isHidden = menu.classList.contains('hidden');
-    console.log('isHidden:', isHidden);
+  console.log('📱 Menu element:', menu);
+  console.log('🔘 Button element:', menuButton);
+  
+  if (!menu) {
+    console.error('❌ Mobile menu not found! Looking for #mobile-menu or #mobile-nav');
+    console.log('Available elements with id:', document.querySelectorAll('[id]'));
+    return;
+  }
+  
+  const isHidden = menu.classList.contains('hidden');
+  console.log('👁️ Menu is currently hidden:', isHidden);
+  console.log('📋 Menu classes:', menu.classList.toString());
+  
+  if (isHidden) {
+    // Open menu
+    console.log('✅ Opening menu...');
+    menu.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    console.log('📋 Menu classes after open:', menu.classList.toString());
     
-    if (isHidden) {
-      menu.classList.remove('hidden');
-      body.style.overflow = 'hidden';
-      // Change icon to close
-      if (menuButton) {
-        const icon = menuButton.querySelector('span');
-        if (icon) {
-          icon.textContent = 'close';
-          console.log('Icon changed to close');
-        }
+    // Change icon to close
+    if (menuButton) {
+      const icon = menuButton.querySelector('span');
+      if (icon) {
+        console.log('🔄 Changing icon from', icon.textContent, 'to close');
+        icon.textContent = 'close';
+      } else {
+        console.warn('⚠️ Icon span not found in button');
       }
     } else {
-      menu.classList.add('hidden');
-      body.style.overflow = '';
-      // Change icon back to menu
-      if (menuButton) {
-        const icon = menuButton.querySelector('span');
-        if (icon) {
-          icon.textContent = 'menu';
-          console.log('Icon changed to menu');
-        }
-      }
+      console.warn('⚠️ Menu button not found');
     }
   } else {
-    console.log('Menu not found!');
+    // Close menu
+    console.log('❌ Closing menu...');
+    menu.classList.add('hidden');
+    document.body.style.overflow = '';
+    console.log('📋 Menu classes after close:', menu.classList.toString());
+    
+    // Change icon back to menu
+    if (menuButton) {
+      const icon = menuButton.querySelector('span');
+      if (icon) {
+        console.log('🔄 Changing icon from', icon.textContent, 'to menu');
+        icon.textContent = 'menu';
+      }
+    }
   }
-}
+  
+  console.log('✨ toggleMobileMenu() completed');
+};
+
+console.log('✅ toggleMobileMenu function defined on window object');
+console.log('🔍 Testing if function is accessible:', typeof window.toggleMobileMenu);
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', function(event) {
-  const menu = document.getElementById('mobile-menu');
-  const menuButton = event.target.closest('[onclick*="toggleMobileMenu"]');
-  const isInsideMenu = event.target.closest('#mobile-menu');
+  const menu = document.getElementById('mobile-menu') || document.getElementById('mobile-nav');
+  const menuButton = event.target.closest('button[onclick*="toggleMobileMenu"]');
+  const isInsideMenu = event.target.closest('#mobile-menu') || event.target.closest('#mobile-nav');
   
   if (menu && !isInsideMenu && !menuButton && !menu.classList.contains('hidden')) {
+    console.log('🖱️ Click outside detected, closing menu');
     menu.classList.add('hidden');
     document.body.style.overflow = '';
+    
+    // Reset icon
+    const btn = document.querySelector('button[onclick*="toggleMobileMenu"]');
+    if (btn) {
+      const icon = btn.querySelector('span');
+      if (icon) icon.textContent = 'menu';
+    }
   }
 });
 
 // Enhanced scroll to section with mobile menu close
 window.scrollToSection = function(sectionId) {
+  console.log('📜 scrollToSection called for:', sectionId);
+  
   // Close mobile menu if open
-  const menu = document.getElementById('mobile-menu');
+  const menu = document.getElementById('mobile-menu') || document.getElementById('mobile-nav');
   if (menu && !menu.classList.contains('hidden')) {
+    console.log('🔒 Closing menu before scroll');
     menu.classList.add('hidden');
     document.body.style.overflow = '';
+    
+    // Reset icon
+    const btn = document.querySelector('button[onclick*="toggleMobileMenu"]');
+    if (btn) {
+      const icon = btn.querySelector('span');
+      if (icon) icon.textContent = 'menu';
+    }
   }
   
   // Navigate if not on home page
   if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    console.log('🔀 Redirecting to home page with hash:', sectionId);
     window.location.href = '/#' + sectionId;
     return;
   }
@@ -73,6 +114,7 @@ window.scrollToSection = function(sectionId) {
   setTimeout(() => {
     const section = document.getElementById(sectionId);
     if (section) {
+      console.log('✅ Section found, scrolling to:', sectionId);
       const headerHeight = document.querySelector('header')?.offsetHeight || 0;
       const targetPosition = section.offsetTop - headerHeight;
       
@@ -80,14 +122,18 @@ window.scrollToSection = function(sectionId) {
         top: targetPosition,
         behavior: 'smooth'
       });
+    } else {
+      console.warn('⚠️ Section not found:', sectionId);
     }
   }, 100);
 };
 
 // Handle hash on page load
 window.addEventListener('load', () => {
+  console.log('📄 Page loaded');
   if (window.location.hash) {
     const sectionId = window.location.hash.substring(1);
+    console.log('🔗 Hash detected on load:', sectionId);
     setTimeout(() => scrollToSection(sectionId), 300);
   }
 });
@@ -101,106 +147,6 @@ document.addEventListener('touchend', function(event) {
   }
   lastTouchEnd = now;
 }, false);
-
-// Add touch feedback to buttons
-document.addEventListener('DOMContentLoaded', function() {
-  const buttons = document.querySelectorAll('button, a');
-  
-  buttons.forEach(button => {
-    button.addEventListener('touchstart', function() {
-      this.style.opacity = '0.7';
-    });
-    
-    button.addEventListener('touchend', function() {
-      this.style.opacity = '1';
-    });
-    
-    button.addEventListener('touchcancel', function() {
-      this.style.opacity = '1';
-    });
-  });
-});
-
-// Lazy load images
-if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        if (img.dataset.src) {
-          img.src = img.dataset.src;
-          img.removeAttribute('data-src');
-          observer.unobserve(img);
-        }
-      }
-    });
-  });
-
-  // Observe all images with data-src
-  document.addEventListener('DOMContentLoaded', () => {
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach(img => imageObserver.observe(img));
-  });
-}
-
-// Smooth scroll polyfill for older browsers
-if (!('scrollBehavior' in document.documentElement.style)) {
-  const smoothScrollTo = (element, duration = 500) => {
-    const targetPosition = element.offsetTop;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
-
-    const animation = currentTime => {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(0, run);
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-    };
-
-    const ease = (t, b, c, d) => {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t + b;
-      t--;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-    };
-
-    requestAnimationFrame(animation);
-  };
-
-  // Override scrollToSection for older browsers
-  const originalScrollToSection = window.scrollToSection;
-  window.scrollToSection = function(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      smoothScrollTo(section);
-    } else if (originalScrollToSection) {
-      originalScrollToSection(sectionId);
-    }
-  };
-}
-
-// Add pull-to-refresh indicator (optional)
-let touchStartY = 0;
-let touchEndY = 0;
-
-document.addEventListener('touchstart', e => {
-  touchStartY = e.changedTouches[0].screenY;
-}, { passive: true });
-
-document.addEventListener('touchend', e => {
-  touchEndY = e.changedTouches[0].screenY;
-  handleSwipe();
-}, { passive: true });
-
-function handleSwipe() {
-  // Pull down to refresh (only at top of page)
-  if (window.scrollY === 0 && touchEndY > touchStartY + 100) {
-    // Optional: Add refresh logic here
-    console.log('Pull to refresh triggered');
-  }
-}
 
 // Optimize performance on scroll
 let ticking = false;
@@ -220,7 +166,6 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 function handleScroll(scrollY) {
-  // Add scroll-based effects here
   const header = document.querySelector('header');
   if (header) {
     if (scrollY > 100) {
@@ -243,22 +188,31 @@ window.isIOS = () => {
 
 // Add device class to body
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('🎯 DOMContentLoaded event fired');
+  console.log('📱 Is mobile:', window.isMobile());
+  console.log('🍎 Is iOS:', window.isIOS());
+  
   if (window.isMobile()) {
     document.body.classList.add('is-mobile');
   }
   if (window.isIOS()) {
     document.body.classList.add('is-ios');
   }
+  
+  // Check if menu exists
+  const menu = document.getElementById('mobile-menu') || document.getElementById('mobile-nav');
+  console.log('🔍 Menu check on DOMContentLoaded:', menu ? 'Found' : 'Not found');
+  if (menu) {
+    console.log('📋 Menu ID:', menu.id);
+    console.log('📋 Menu classes:', menu.classList.toString());
+  }
+  
+  // Check if button exists
+  const btn = document.querySelector('button[onclick*="toggleMobileMenu"]');
+  console.log('🔘 Button check on DOMContentLoaded:', btn ? 'Found' : 'Not found');
+  if (btn) {
+    console.log('🔘 Button onclick:', btn.getAttribute('onclick'));
+  }
 });
 
-// Service Worker for offline support (optional)
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    // Uncomment to enable service worker
-    // navigator.serviceWorker.register('/sw.js')
-    //   .then(registration => console.log('SW registered'))
-    //   .catch(err => console.log('SW registration failed'));
-  });
-}
-
-console.log('Mobile enhancements loaded ✓');
+console.log('✅ Mobile enhancements loaded successfully');

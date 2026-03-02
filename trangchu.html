@@ -97,10 +97,14 @@
       <nav class="flex items-center justify-center py-4 overflow-x-auto no-scrollbar">
         <ul class="flex items-center space-x-8 text-sm font-semibold tracking-wide text-white/80 whitespace-nowrap">
           <li><a class="text-accent hover:text-white transition-colors" href="#hero">TRANG CHỦ</a></li>
-          <li><a class="hover:text-accent transition-colors cursor-pointer" onclick="document.getElementById('gioi-thieu').scrollIntoView({behavior: 'smooth'})">GIỚI THIỆU</a></li>
-          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer" onclick="document.getElementById('san-pham').scrollIntoView({behavior: 'smooth'})">Jagermeister</a></li>
-          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer" onclick="document.getElementById('san-pham').scrollIntoView({behavior: 'smooth'})">Quà Tặng</a></li>
-          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer" onclick="document.getElementById('feedback').scrollIntoView({behavior: 'smooth'})">Tin Tức</a></li>
+          <li><a class="hover:text-accent transition-colors cursor-pointer"
+              onclick="document.getElementById('gioi-thieu').scrollIntoView({behavior: 'smooth'})">GIỚI THIỆU</a></li>
+          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer"
+              onclick="document.getElementById('san-pham').scrollIntoView({behavior: 'smooth'})">Jagermeister</a></li>
+          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer"
+              onclick="document.getElementById('san-pham').scrollIntoView({behavior: 'smooth'})">Quà Tặng</a></li>
+          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer"
+              onclick="document.getElementById('feedback').scrollIntoView({behavior: 'smooth'})">Tin Tức</a></li>
           <li><a class="hover:text-accent transition-colors uppercase" href="lienhe.html">Liên Hệ</a></li>
         </ul>
       </nav>
@@ -390,7 +394,8 @@
           </li>
           <li class="flex items-center gap-3">
             <span class="material-symbols-outlined text-accent text-sm">facebook</span>
-            <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="hover:text-accent">Facebook: Tuấn</a>
+            <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank"
+              class="hover:text-accent">Facebook: Tuấn</a>
           </li>
           <li class="flex items-start gap-3">
             <span class="material-symbols-outlined text-accent text-sm">local_shipping</span>
@@ -414,24 +419,42 @@
         không dành cho người dưới 18 tuổi.</p>
     </div>
   </footer>
-  <div id="floating-buttons" class="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col space-y-4 z-40 transition-all duration-300">
-    <button id="toggle-floating" class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg" title="Đóng/Mở menu">
+  <div id="floating-buttons"
+    class="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col space-y-4 z-40 transition-all duration-300">
+    <button id="toggle-floating"
+      class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg"
+      title="Đóng/Mở menu">
       <span class="material-symbols-outlined">menu</span>
     </button>
     <div id="floating-menu" class="flex flex-col space-y-4">
-      <a href="https://zalo.me/0356781839" target="_blank" class="w-12 h-12 bg-[#0068ff] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Zalo: 0356 781 839">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.237.738 4.304 1.986 5.97L2.05 21.95l4.098-1.903C7.813 21.315 9.826 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+      <a href="https://zalo.me/0356781839" target="_blank"
+        class="w-12 h-12 bg-[#0068ff] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg"
+        title="Zalo: 0356 781 839">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M12 2C6.477 2 2 6.477 2 12c0 2.237.738 4.304 1.986 5.97L2.05 21.95l4.098-1.903C7.813 21.315 9.826 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" />
+        </svg>
       </a>
-      <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="w-12 h-12 bg-[#1877f2] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Facebook: Tuấn">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank"
+        class="w-12 h-12 bg-[#1877f2] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg"
+        title="Facebook: Tuấn">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
       </a>
-      <a href="tel:0356781839" class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Gọi: 0356 781 839">
+      <a href="tel:0356781839"
+        class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg"
+        title="Gọi: 0356 781 839">
         <span class="material-symbols-outlined">call</span>
       </a>
-      <button onclick="alert('JAGERMEISTER – SHIP HỎA TỐC FULL MAP\n\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\n\nLiên hệ:\n📞 Zalo/SĐT: 0356 781 839\n📘 Facebook: Tuấn\n\nGọi ngay để được tư vấn và giao hàng nhanh!')" class="w-12 h-12 bg-primary border border-accent/30 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg group">
+      <button
+        onclick="alert('JAGERMEISTER – SHIP HỎA TỐC FULL MAP\n\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\n\nLiên hệ:\n📞 Zalo/SĐT: 0356 781 839\n📘 Facebook: Tuấn\n\nGọi ngay để được tư vấn và giao hàng nhanh!')"
+        class="w-12 h-12 bg-primary border border-accent/30 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg group">
         <span class="material-symbols-outlined group-hover:text-accent">location_on</span>
       </button>
-      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg border border-slate-200">
+      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg border border-slate-200">
         <span class="material-symbols-outlined">expand_less</span>
       </a>
     </div>
@@ -443,14 +466,14 @@
     const floatingMenu = document.getElementById('floating-menu');
     let isOpen = true;
 
-    toggleBtn.addEventListener('click', function() {
+    toggleBtn.addEventListener('click', function () {
       isOpen = !isOpen;
       if (isOpen) {
         floatingMenu.style.display = 'flex';
-        toggleBtn.querySelector('span').textContent = 'menu';
+        toggleBtn.querySelector('span').textContent = 'close';  // Đang mở → icon "close" để đóng
       } else {
         floatingMenu.style.display = 'none';
-        toggleBtn.querySelector('span').textContent = 'close';
+        toggleBtn.querySelector('span').textContent = 'menu';   // Đang đóng → icon "menu" để mở
       }
     });
   </script>

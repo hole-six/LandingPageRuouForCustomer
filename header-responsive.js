@@ -50,12 +50,8 @@ function getResponsiveHeaderTemplate() {
             </a>
             
             <!-- Mobile Menu Button -->
-            <button 
-              onclick="toggleMobileMenu()" 
-              class="lg:hidden p-2 text-white hover:text-accent transition-colors"
-              aria-label="Toggle menu"
-            >
-              <span class="material-symbols-outlined text-3xl">menu</span>
+            <button id="menuBtn" class="lg:hidden p-2 text-white hover:text-accent transition-colors">
+              <span id="menuIcon" class="material-symbols-outlined text-3xl">menu</span>
             </button>
           </div>
         </div>
@@ -73,7 +69,7 @@ function getResponsiveHeaderTemplate() {
         </nav>
         
         <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="lg:hidden hidden mobile-menu bg-primary/95 backdrop-blur-sm">
+        <nav id="mobileMenu" class="hidden bg-primary/95 backdrop-blur-sm">
           <ul class="py-2 space-y-1">
             <li>
               <a class="block py-3 px-4 text-white hover:bg-accent/10 hover:text-accent transition-colors rounded-lg font-medium" 
