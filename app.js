@@ -658,10 +658,6 @@ window.addEventListener('load', () => {
           document.body.style.overflow = '';
         }
       };
-      
-      console.log('✅ Mobile menu initialized');
-    } else {
-      console.log('⏳ Waiting for mobile menu...');
     }
   }
   
@@ -728,10 +724,6 @@ window.addEventListener('load', () => {
       // Hỗ trợ cả click và touch
       toggleBtn.onclick = toggleMenu;
       toggleBtn.ontouchend = toggleMenu;
-      
-      console.log('✅ Floating buttons initialized');
-    } else {
-      console.log('⏳ Waiting for floating buttons...');
     }
   }
   
