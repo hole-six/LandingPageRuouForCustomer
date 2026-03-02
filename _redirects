@@ -1,0 +1,4 @@
+# Netlify redirects for SPA routing
+/chi-tiet    /index.html   200
+/lien-he     /index.html   200
+/*           /index.html   200

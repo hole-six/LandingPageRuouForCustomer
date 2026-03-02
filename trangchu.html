@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Hữu Tuấn - Jagermeister Chính Hãng | Ship Hỏa Tốc Vũng Tàu</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0D1B3E", // Deep elegant blue from screenshot
+            accent: "#C5A059",  // Sophisticated gold
+            "background-light": "#F8F9FA",
+            "background-dark": "#080F25",
+          },
+          fontFamily: {
+            display: ["Playfair Display", "serif"],
+            sans: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .hero-gradient {
+      background: linear-gradient(rgba(13, 27, 62, 0.7), rgba(13, 27, 62, 0.7)), url('https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?auto=format&fit=crop&q=80&w=2000') no-repeat center center;
+      background-size: cover;
+    }
+
+    .text-glow {
+      text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+    }
+
+    .category-card:hover .category-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
+  <header class="bg-primary border-b border-accent/20 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between py-4 border-b border-white/10">
+        <div class="flex items-center space-x-6">
+          <div class="h-16 w-16 bg-accent flex items-center justify-center rounded">
+            <span class="material-symbols-outlined text-primary text-4xl">liquor</span>
+          </div>
+          <div class="hidden lg:block">
+            <h1 class="font-display text-accent text-2xl font-bold tracking-wider">HỮU TUẤN </h1>
+            <p class="text-white/60 text-xs tracking-widest uppercase">Rượu Uy Tín</p>
+          </div>
+        </div>
+        <div class="flex-1 max-w-xl mx-12 hidden md:block">
+          <div class="relative group">
+            <input
+              class="w-full bg-white/5 border border-white/20 rounded py-2.5 px-4 text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent transition-all"
+              placeholder="Bạn đang cần tìm gì?" type="text" />
+            <button
+              class="absolute right-0 top-0 h-full px-6 bg-accent text-primary font-bold rounded-r flex items-center gap-2 hover:bg-accent/90 transition-colors">
+              <span class="material-symbols-outlined text-sm">search</span>
+              <span class="text-sm font-semibold">TÌM KIẾM</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center space-x-8">
+          <div class="hidden xl:flex items-center gap-3 text-white">
+            <div class="p-2 bg-accent/20 rounded-full">
+              <span class="material-symbols-outlined text-accent">call</span>
+            </div>
+            <div>
+              <p class="text-[10px] text-accent font-bold uppercase tracking-tighter">Hotline 24/7</p>
+              <p class="text-sm font-bold">0356 781 839</p>
+            </div>
+          </div>
+          <div class="p-1 bg-white rounded">
+            <img alt="Contact QR Code" class="w-10 h-10"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC25CX6z-Z99UTyQIBMS0uHRY8ZcQILgxActQh7JzKrahtNPBhqfjo8mfnlExKfb4rhkeZACLcwyCC8Rab4CQD5cA6QzvqLFYdRIf_rQ3HuPWPzV0PJ2swWZaQZZp-1QrTHlkjYbfyXX7ztFxr1Vjrw4X3hTfdzAfL6IBMf-s8MgIgrDlUEx7l_epV4enQgpQKFzd0sSWfJt9jh3a2At4OpjxDyYgoiijajwbE2eJdeQk6qzYlcQ8r5zNToRZbBbalqLMcgE7kwLywt" />
+          </div>
+        </div>
+      </div>
+      <nav class="flex items-center justify-center py-4 overflow-x-auto no-scrollbar">
+        <ul class="flex items-center space-x-8 text-sm font-semibold tracking-wide text-white/80 whitespace-nowrap">
+          <li><a class="text-accent hover:text-white transition-colors" href="#hero">TRANG CHỦ</a></li>
+          <li><a class="hover:text-accent transition-colors cursor-pointer" onclick="document.getElementById('gioi-thieu').scrollIntoView({behavior: 'smooth'})">GIỚI THIỆU</a></li>
+          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer" onclick="document.getElementById('san-pham').scrollIntoView({behavior: 'smooth'})">Jagermeister</a></li>
+          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer" onclick="document.getElementById('san-pham').scrollIntoView({behavior: 'smooth'})">Quà Tặng</a></li>
+          <li><a class="hover:text-accent transition-colors uppercase cursor-pointer" onclick="document.getElementById('feedback').scrollIntoView({behavior: 'smooth'})">Tin Tức</a></li>
+          <li><a class="hover:text-accent transition-colors uppercase" href="lienhe.html">Liên Hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="hero" class="relative h-[650px] flex items-center overflow-hidden">
+    <div class="absolute inset-0 hero-gradient"></div>
+    <div class="max-w-7xl mx-auto px-4 w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8 animate-fade-in-up">
+        <div
+          class="inline-block px-4 py-1 border border-accent text-accent text-xs font-bold tracking-[0.2em] uppercase">
+          Rượu Chính Hãng Đức
+        </div>
+        <h2 class="text-6xl md:text-7xl font-display text-white leading-tight">
+          Hương Vị <br /> <span class="italic text-accent">Huyền Bí</span>
+        </h2>
+        <p class="text-white/70 text-lg max-w-md leading-relaxed border-l-2 border-accent pl-6">
+          Khám phá tinh hoa thảo mộc trong từng giọt Jagermeister. Lựa chọn đẳng cấp cho những bữa tiệc sôi động và sang
+          trọng.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 sm:space-x-6">
+          <button onclick="document.getElementById('san-pham').scrollIntoView({behavior: 'smooth'})"
+            class="w-full sm:w-auto bg-accent text-primary px-10 py-4 font-bold tracking-widest hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl rounded">
+            MUA NGAY
+          </button>
+          <a href="lienhe.html"
+            class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-10 py-4 font-bold tracking-widest hover:bg-white/10 transition-all inline-block rounded">
+            LIÊN HỆ
+          </a>
+        </div>
+      </div>
+      <div class="hidden lg:flex justify-end items-center relative">
+        <div class="relative w-[500px] h-[500px]">
+          <img alt="Jagermeister Bottle"
+            class="w-full h-full object-contain filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform rotate-12"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZDSCRyhImEww14MQ32_sOjKGrNbJ3CFexqU-A2wsOyAyUNYXZdmiWcHDuJs57dYCxEr8EjTZRWKj6jhJxuJMdvSIhfCh1qNPZHLQEeoQJPuqzplnzfsxhJAECLtgW1StfRloXDOsrdBem0qwxB3Uhc1ybPdJLJ_0OaoC4RBUkbtI-NHWP7H7i9kKCQhvaB-7nHLlPaBZW981myJQQKa5Va2saU5Y9mHIsVuE0nSgaczJzNIadmjoa6dbvylBughUbGriUyT_IrrKb" />
+          <div
+            class="absolute top-10 right-0 bg-white/10 backdrop-blur-md p-4 rounded border border-white/20 animate-bounce duration-[3000ms]">
+            <p class="text-accent font-bold">56 Thảo Mộc</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="absolute left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-accent hover:border-accent transition-all">
+      <span class="material-symbols-outlined">chevron_left</span>
+    </button>
+    <button
+      class="absolute right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-accent hover:border-accent transition-all">
+      <span class="material-symbols-outlined">chevron_right</span>
+    </button>
+  </section>
+  <section id="gioi-thieu" class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h3 class="font-display text-white text-3xl md:text-4xl uppercase tracking-widest mb-4">Jagermeister - Lựa chọn
+          của sự tinh tế</h3>
+        <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+        <p class="text-accent font-display italic text-xl">Chìm đắm trong hương vị đích thực</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div class="text-center group">
+          <div
+            class="w-20 h-20 mx-auto rounded-full border-2 border-accent/30 flex items-center justify-center mb-6 group-hover:bg-accent/10 group-hover:border-accent transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-accent">liquor</span>
+          </div>
+          <h4 class="text-white font-bold mb-2 uppercase text-sm tracking-widest">Sản Phẩm Đa Dạng</h4>
+          <p class="text-white/50 text-xs">Nhập khẩu &amp; phân phối chính hãng</p>
+        </div>
+        <div class="text-center group">
+          <div
+            class="w-20 h-20 mx-auto rounded-full border-2 border-accent/30 flex items-center justify-center mb-6 group-hover:bg-accent/10 group-hover:border-accent transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-accent">verified</span>
+          </div>
+          <h4 class="text-white font-bold mb-2 uppercase text-sm tracking-widest">Cam Kết Chất Lượng</h4>
+          <p class="text-white/50 text-xs">Sản phẩm nguyên chai, chính hãng 100%</p>
+        </div>
+        <div class="text-center group">
+          <div
+            class="w-20 h-20 mx-auto rounded-full border-2 border-accent/30 flex items-center justify-center mb-6 group-hover:bg-accent/10 group-hover:border-accent transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-accent">local_shipping</span>
+          </div>
+          <h4 class="text-white font-bold mb-2 uppercase text-sm tracking-widest">Giao Hàng Toàn Quốc</h4>
+          <p class="text-white/50 text-xs">Linh hoạt giao hàng theo yêu cầu khách hàng</p>
+        </div>
+        <div class="text-center group">
+          <div
+            class="w-20 h-20 mx-auto rounded-full border-2 border-accent/30 flex items-center justify-center mb-6 group-hover:bg-accent/10 group-hover:border-accent transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-accent">payments</span>
+          </div>
+          <h4 class="text-white font-bold mb-2 uppercase text-sm tracking-widest">Thanh Toán Tiện Lợi</h4>
+          <p class="text-white/50 text-xs">Thanh toán chuyển khoản, tiền mặt</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="san-pham" class="py-24 bg-white dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col items-center mb-16 text-center">
+        <h2 class="text-primary dark:text-white text-4xl font-display font-bold uppercase tracking-widest mb-4">Danh Mục
+          Sản Phẩm</h2>
+        <div class="w-16 h-1 bg-accent mb-8"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-primary/10 dark:border-white/5 aspect-square category-card">
+          <img alt="Jagermeister Classic"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWq2PIf10dTYJqZ-Qtk4EcwfjMY2XJWCABcMVsDygWAW3pS9RLplqrmorvUk27G0ULAX36BO7dNDJApjsqu6cfq3WW1azlCBhSI6Qfkcn2XHE51mVIG0-uQDzMSYx7_0DB-ShwkBxBnRwHmkeiSJ7mp-_Id6HFGVHJuQxD8MG9QMrQ4kUMYczaKX3a71k5K8ao-t29N6twyTTqgVUnTuNLMOY_ZsTCyhAhh5E2u5RSfpf_inYSOM_u3FCkpAbQtPWBkBB1afZgSRJw" />
+          <div class="absolute inset-x-0 bottom-0 bg-primary/90 py-4 text-center">
+            <span class="text-white font-bold uppercase text-sm tracking-widest">JÄGERMEISTER CLASSIC</span>
+          </div>
+          <div
+            class="absolute inset-0 bg-accent/20 opacity-0 category-overlay transition-opacity duration-300 flex items-center justify-center">
+            <button
+              class="bg-white text-primary px-6 py-2 font-bold text-sm shadow-xl hover:bg-accent hover:text-white transition-all">XEM
+              NGAY</button>
+          </div>
+        </div>
+        <div
+          class="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-primary/10 dark:border-white/5 aspect-square category-card">
+          <img alt="Jagermeister Manifest"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkHjmQN0A6mrycbRJtO36vg9q7lK8TgAWdfHqt-XWBcCeyoh7G7fwaRSZspmx71BEH1bP1XZdhEsyU4zSYO2OrBG-R51jciM19ibU3tyiQOAd2THQPScuB_ga7FSkGoNA54rYgpiygUzT0G2AYfJoVvB20Afs-17-xMF0G5xLJZRCZp84ike2EAW-hGQ3endL6d1jApqz_XRP7CkXwBdaKoNhL3ba7cDBC9v95uBFGU2wpc87cWIln92WSwi-pvyhPaUAQ6_HaTSy0" />
+          <div class="absolute inset-x-0 bottom-0 bg-primary/90 py-4 text-center">
+            <span class="text-white font-bold uppercase text-sm tracking-widest">JÄGERMEISTER MANIFEST</span>
+          </div>
+          <div
+            class="absolute inset-0 bg-accent/20 opacity-0 category-overlay transition-opacity duration-300 flex items-center justify-center">
+            <button
+              class="bg-white text-primary px-6 py-2 font-bold text-sm shadow-xl hover:bg-accent hover:text-white transition-all">XEM
+              NGAY</button>
+          </div>
+        </div>
+        <div
+          class="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-primary/10 dark:border-white/5 aspect-square category-card">
+          <img alt="Gift Sets"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXB-GAQvWXSXjJq-S03bFQohs-5nSAiHnjpklgZcOoEJnG_7KW4Cgc-MnxlcCckCMqtl2LwM8ua6zB2MORCESLPgBexa1BxjzW0Lj-Hx2gYvAZoiyoM6AowY7xklwdCT5SYIgiSm-1dB2us0NyTi5uiCe0MXASl3tFHG556B1RFQU7TsmpWVhKk_L-npD8j9S8PuV5s2_Q5v2vdLTJvtOwnBVktLoL7vrS7hWaGGm8gE03ZBOOeEHilSPOG8qv_QmLl6FjooM99gSd" />
+          <div class="absolute inset-x-0 bottom-0 bg-primary/90 py-4 text-center">
+            <span class="text-white font-bold uppercase text-sm tracking-widest">HỘP QUÀ TẾT 2026</span>
+          </div>
+          <div
+            class="absolute inset-0 bg-accent/20 opacity-0 category-overlay transition-opacity duration-300 flex items-center justify-center">
+            <button
+              class="bg-white text-primary px-6 py-2 font-bold text-sm shadow-xl hover:bg-accent hover:text-white transition-all">XEM
+              NGAY</button>
+          </div>
+        </div>
+        <div
+          class="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-primary/10 dark:border-white/5 aspect-square category-card">
+          <img alt="Limited Edition"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD10kLpeR4NhYXm-vLXQt40dKvn7Gi1NScZyVJAK3_BhJ6UEWKkmRT5KdUICFCrgv6FkCkh1YI4V_1tcoRGYzhmRhs3H30LStEnSt18L2aJgry8eEgnYGLJT2kAWlc4cF0G_GeNXxn_6offCf4dwIWYGKF4qILIhYI1K0dWBYSgtU2REzA7I4AZoo4HZUzC1Ie0-9wytt-1MuFxtZ4611VzjwO7bTmJw14bM9vwpb_P9I8pcZGLjWEktio9_TQQatCit_vzweWLP6hx" />
+          <div class="absolute inset-x-0 bottom-0 bg-primary/90 py-4 text-center">
+            <span class="text-white font-bold uppercase text-sm tracking-widest">LIMITED EDITION</span>
+          </div>
+          <div
+            class="absolute inset-0 bg-accent/20 opacity-0 category-overlay transition-opacity duration-300 flex items-center justify-center">
+            <button
+              class="bg-white text-primary px-6 py-2 font-bold text-sm shadow-xl hover:bg-accent hover:text-white transition-all">XEM
+              NGAY</button>
+          </div>
+        </div>
+        <div
+          class="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-primary/10 dark:border-white/5 aspect-square category-card">
+          <img alt="Cold Brew Coffee"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmVBTsaEGK3_NdwtPeh1ah3ujzGJ3KMBkFsRVT8bUxgic_r7Nc3BXSdUBnReA2PRgFmctmrz3rhw1pHtGHIhFNzHDz9KPukKhc5r8_YNxk2e8dCvfiJi_tEOM2PCsMWzW0xtrLbpjSMQr3yQSid41Zv3Xsw8uESsbXvJOEJvTs_98uHGx8vqsuNOiv4N0sH0o-GeeaXRRfdoNqhVIPWO0AEZbZtir4K_Yt1ZS7P5nLX3ama6uMTheiQuVdjlmR8qBpYFHJJ10GmiDE" />
+          <div class="absolute inset-x-0 bottom-0 bg-primary/90 py-4 text-center">
+            <span class="text-white font-bold uppercase text-sm tracking-widest">COLD BREW COFFEE</span>
+          </div>
+          <div
+            class="absolute inset-0 bg-accent/20 opacity-0 category-overlay transition-opacity duration-300 flex items-center justify-center">
+            <button
+              class="bg-white text-primary px-6 py-2 font-bold text-sm shadow-xl hover:bg-accent hover:text-white transition-all">XEM
+              NGAY</button>
+          </div>
+        </div>
+        <div
+          class="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-primary/10 dark:border-white/5 aspect-square category-card">
+          <img alt="Jagermeister Scharf"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAysXzIagdUJ8GH-ci6VWMivFfiAZCWieVkLAgh50a9JFT73Hqh983aWvA3x9KtnShF8HnTSGDxZ9oQZ6T1Y73rFLpHwKiIbK3jWJFM3Un0gtfl3krhdAkTii7NS7Z7ELofet-vyXRAd9Gdx2NDLgIhSIp4F2BcfJ0S90mNxLQAH7cMebFaaPa6PDETVw_QBw8De2dxHfJlrB854PUZfamTB1mVf5dXBS-J0l8EmRP9JT9pGXWBsqgQ4awAU1CUq-tosDvwy5BtvWV5" />
+          <div class="absolute inset-x-0 bottom-0 bg-primary/90 py-4 text-center">
+            <span class="text-white font-bold uppercase text-sm tracking-widest">JÄGERMEISTER SCHARF</span>
+          </div>
+          <div
+            class="absolute inset-0 bg-accent/20 opacity-0 category-overlay transition-opacity duration-300 flex items-center justify-center">
+            <button
+              class="bg-white text-primary px-6 py-2 font-bold text-sm shadow-xl hover:bg-accent hover:text-white transition-all">XEM
+              NGAY</button>
+          </div>
+        </div>
+        <div
+          class="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-primary/10 dark:border-white/5 aspect-square category-card">
+          <img alt="Wines" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcmdUBq5zykBTWT004BywDmC3ACMGTns5k8upMJ-nPRfyExHtqvcWnZ-SjNyTfDHNvIREVZwjg-8um39v5G8HPIsv1w27V_jh1Ddy_uL93Vh1QTYRNkLYw0DwstUsFRhbjlsPAhp91miw3OAcH31WhKlePYpcAxIev_4uivDdoovbFh1-yT8RSf_geOJtj1kqB9eZrV3LZ1_efsDkWfNg2Y275i3c_0M2ZeoHwGkgcwKAlCKoHyJM4CFFiM7V9c3L7R5NqWpegdc8L" />
+          <div class="absolute inset-x-0 bottom-0 bg-primary/90 py-4 text-center">
+            <span class="text-white font-bold uppercase text-sm tracking-widest">RƯỢU VANG NHẬP KHẨU</span>
+          </div>
+          <div
+            class="absolute inset-0 bg-accent/20 opacity-0 category-overlay transition-opacity duration-300 flex items-center justify-center">
+            <button
+              class="bg-white text-primary px-6 py-2 font-bold text-sm shadow-xl hover:bg-accent hover:text-white transition-all">XEM
+              NGAY</button>
+          </div>
+        </div>
+        <div
+          class="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-primary/10 dark:border-white/5 aspect-square category-card">
+          <img alt="Accessories"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVYTMy9xPYrrqXQni3sheOv9ZcIufgsad4mNzm85jPQgrxpDBv4d66jbsVXtSy9jmll7DBU_DBdO4AgAZcMLm9dTvH61Bq_DMeJTDt8GGZYOcq-2b_cdBg-8fE870Kt5gGJFIbVbc3tqolKllcBoj9IN9x2zPliJDKkw2hiBWe_5rjc4TaPrgto_1gNda0T_1Gf7TbTBiT-tqgISwtY_wiTKNGQeX2D4_xpjBqM6lDsq6lL0nf9YtV0KjHTv2geoeqjMgjpwDITgUH" />
+          <div class="absolute inset-x-0 bottom-0 bg-primary/90 py-4 text-center">
+            <span class="text-white font-bold uppercase text-sm tracking-widest">PHỤ KIỆN RƯỢU</span>
+          </div>
+          <div
+            class="absolute inset-0 bg-accent/20 opacity-0 category-overlay transition-opacity duration-300 flex items-center justify-center">
+            <button
+              class="bg-white text-primary px-6 py-2 font-bold text-sm shadow-xl hover:bg-accent hover:text-white transition-all">XEM
+              NGAY</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center space-x-2 mt-16">
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-sm">keyboard_double_arrow_left</span>
+        </button>
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-sm">chevron_left</span>
+        </button>
+        <button class="w-10 h-10 flex items-center justify-center bg-primary text-white font-bold">1</button>
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white transition-colors">2</button>
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white transition-colors">3</button>
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+        </button>
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-sm">keyboard_double_arrow_right</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-primary text-white py-12 border-t-4 border-accent">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div>
+        <h5 class="text-accent font-display text-xl font-bold mb-6">JÄGERMEISTER SPECIALIST</h5>
+        <p class="text-white/60 text-sm leading-loose">
+          Đơn vị cung cấp Jagermeister và các dòng rượu ngoại cao cấp hàng đầu. Chúng tôi cam kết mang đến giá trị và
+          chất lượng tốt nhất cho khách hàng.
+        </p>
+        <div class="flex items-center space-x-4 mt-6">
+          <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
+            href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+          <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
+            href="#"><span class="material-symbols-outlined text-sm">chat</span></a>
+          <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
+            href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-accent font-display text-xl font-bold mb-6 uppercase tracking-wider">Hỗ Trợ Khách Hàng</h5>
+        <ul class="space-y-3 text-sm text-white/60">
+          <li><a class="hover:text-accent transition-colors" href="#">Hướng dẫn đặt hàng</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#">Chính sách vận chuyển</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#">Hình thức thanh toán</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#">Chính sách đổi trả</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-accent font-display text-xl font-bold mb-6 uppercase tracking-wider">Thông Tin Liên Hệ</h5>
+        <ul class="space-y-4 text-sm text-white/60">
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-accent text-sm">location_on</span>
+            <span>Khu vực: Vũng Tàu, Bà Rịa, Long Điền, Phước Hải, Phước Tỉnh</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-accent text-sm">call</span>
+            <span>Zalo/SĐT: 0356 781 839</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-accent text-sm">facebook</span>
+            <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="hover:text-accent">Facebook: Tuấn</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-accent text-sm">local_shipping</span>
+            <span>Ship: Vũng Tàu, Bà Rịa, Long Điền, Phước Hải, Phước Tỉnh</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-accent font-display text-xl font-bold mb-6 uppercase tracking-wider">Đăng Ký Nhận Tin</h5>
+        <p class="text-xs text-white/60 mb-4">Cập nhật những ưu đãi và sản phẩm mới nhất từ chúng tôi.</p>
+        <div class="flex">
+          <input
+            class="bg-white/5 border border-white/20 rounded-l py-2 px-4 text-sm w-full focus:outline-none focus:ring-1 focus:ring-accent"
+            placeholder="Email của bạn..." type="email" />
+          <button class="bg-accent text-primary px-4 font-bold text-xs rounded-r">GỬI</button>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/10 text-center text-xs text-white/40">
+      <p>© 2025 Hữu Tuấn - Jagermeister Chính Hãng. Ship hỏa tốc Vũng Tàu, Bà Rịa, Long Điền. Rượu
+        không dành cho người dưới 18 tuổi.</p>
+    </div>
+  </footer>
+  <div id="floating-buttons" class="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col space-y-4 z-40 transition-all duration-300">
+    <button id="toggle-floating" class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg" title="Đóng/Mở menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <div id="floating-menu" class="flex flex-col space-y-4">
+      <a href="https://zalo.me/0356781839" target="_blank" class="w-12 h-12 bg-[#0068ff] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Zalo: 0356 781 839">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.237.738 4.304 1.986 5.97L2.05 21.95l4.098-1.903C7.813 21.315 9.826 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="w-12 h-12 bg-[#1877f2] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Facebook: Tuấn">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="tel:0356781839" class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Gọi: 0356 781 839">
+        <span class="material-symbols-outlined">call</span>
+      </a>
+      <button onclick="alert('JAGERMEISTER – SHIP HỎA TỐC FULL MAP\n\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\n\nLiên hệ:\n📞 Zalo/SĐT: 0356 781 839\n📘 Facebook: Tuấn\n\nGọi ngay để được tư vấn và giao hàng nhanh!')" class="w-12 h-12 bg-primary border border-accent/30 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg group">
+        <span class="material-symbols-outlined group-hover:text-accent">location_on</span>
+      </button>
+      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg border border-slate-200">
+        <span class="material-symbols-outlined">expand_less</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Toggle floating buttons
+    const toggleBtn = document.getElementById('toggle-floating');
+    const floatingMenu = document.getElementById('floating-menu');
+    let isOpen = true;
+
+    toggleBtn.addEventListener('click', function() {
+      isOpen = !isOpen;
+      if (isOpen) {
+        floatingMenu.style.display = 'flex';
+        toggleBtn.querySelector('span').textContent = 'menu';
+      } else {
+        floatingMenu.style.display = 'none';
+        toggleBtn.querySelector('span').textContent = 'close';
+      }
+    });
+  </script>
+
+</body>
+
+</html>
