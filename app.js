@@ -103,7 +103,7 @@ class Router {
           <div>
             <h5 class="text-accent font-display text-xl font-bold mb-6">HỮU TUẤN</h5>
             <p class="text-white/60 text-sm leading-loose">
-              Đơn vị cung cấp Jagermeister chính hãng tại Vũng Tàu - Bà Rịa. Ship hỏa tốc full map: Vũng Tàu, Bà Rịa, Long Điền, Phước Hải, Phước Tỉnh. Giá siêu ổn: 700ml chỉ 450K | 1000ml chỉ 550K. Xuất xứ Đức - lạnh sâu uống shot là chuẩn, pha Redbull thì quẩy hết nấc!
+              Rượu Jagermeister chính hãng tại 446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu. Ship hỏa tốc 24/7 full map: Vũng Tàu, Bà Rịa, Long Điền, Phước Hải, Phước Tỉnh. Giá siêu ổn: 700ml chỉ 450K | 1000ml chỉ 550K. Xuất xứ Đức - lạnh sâu uống shot là chuẩn, pha Redbull thì quẩy hết nấc!
             </p>
             <div class="flex items-center space-x-4 mt-6">
               <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
@@ -126,7 +126,7 @@ class Router {
             <ul class="space-y-4 text-sm text-white/60">
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-accent text-sm">location_on</span>
-                <span>Tuấn - Vũng Tàu, Bà Rịa, Long Điền</span>
+                <span>Địa chỉ: 446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam</span>
               </li>
               <li class="flex items-center gap-3">
                 <span class="material-symbols-outlined text-accent text-sm">call</span>
@@ -145,7 +145,7 @@ class Router {
           </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/10 text-center text-xs text-white/40">
-          <p>© 2025 Hữu Tuấn - Jagermeister Chính Hãng. Ship hỏa tốc Vũng Tàu, Bà Rịa, Long Điền. Rượu không dành cho người dưới 18 tuổi.</p>
+          <p>© 2025 Rượu Jagermeister Vũng Tàu Bà Rịa - Ship hỏa tốc 24/7 · 446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu. Rượu không dành cho người dưới 18 tuổi.</p>
         </div>
       </footer>
       
@@ -164,7 +164,7 @@ class Router {
             <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             <span class="text-[10px] font-medium">Facebook</span>
           </a>
-          <button onclick="alert('JAGERMEISTER – SHIP HỎA TỐC FULL MAP\\n\\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\\n\\nLiên hệ:\\n📞 Zalo/SĐT: 0356 781 839\\n📘 Facebook: Tuấn\\n\\nGọi ngay để được tư vấn và giao hàng nhanh!')" class="flex flex-col items-center justify-center text-white hover:text-accent transition-colors py-2">
+          <button onclick="alert('Địa chỉ: 446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam\\n\\nJAGERMEISTER – SHIP HỎA TỐC FULL MAP\\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\\n\\nLiên hệ:\\n📞 Zalo/SĐT: 0356 781 839\\n📘 Facebook: Tuấn\\n\\nGọi ngay để được tư vấn và giao hàng nhanh!')" class="flex flex-col items-center justify-center text-white hover:text-accent transition-colors py-2">
             <span class="material-symbols-outlined text-2xl mb-1">location_on</span>
             <span class="text-[10px] font-medium">Địa điểm</span>
           </button>
@@ -205,7 +205,7 @@ class Router {
              Rượu Jagermeister <br /> <span class="italic text-accent"> Vũng Tàu</span>
             </h2>
             <p class="text-white/70 text-lg max-w-md leading-relaxed border-l-2 border-accent pl-6">
-              JAGERMEISTER – SHIP HỎA TỐC FULL MAP Vũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh. Gọi là có liền! Không cần chờ đợi, chỉ cần một cú alo/Zalo 0356.781.839, rượu Đức chuẩn vị thảo mộc đã có mặt trên bàn nhậu.
+              Rượu Jagermeister chính hãng tại 446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu. SHIP HỎA TỐC 24/7 FULL MAP: Vũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh. Gọi là có liền! Không cần chờ đợi, chỉ cần một cú alo/Zalo 0356.781.839, rượu Đức chuẩn vị thảo mộc đã có mặt trên bàn nhậu.
             </p>
             <div class="flex flex-col sm:flex-row items-center gap-4 sm:space-x-6">
               <button onclick="scrollToSection('san-pham')" class="w-full sm:w-auto bg-accent text-primary px-10 py-4 font-bold tracking-widest hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl rounded">
@@ -597,7 +597,7 @@ class Router {
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                   <span>Facebook: Tuấn</span>
                 </a>
-                <button onclick="alert('Địa chỉ: JAGERMEISTER – SHIP HỎA TỐC FULL MAP\\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\\n\\nGọi ngay: 0356 781 839')" class="flex items-center justify-center space-x-3 bg-accent text-primary font-bold py-4 px-6 rounded-lg hover:bg-accent/90 transition-all transform hover:scale-105 shadow-lg">
+                <button onclick="alert('Địa chỉ: 446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam\\n\\nJAGERMEISTER – SHIP HỎA TỐC FULL MAP\\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\\n\\nGọi ngay: 0356 781 839')" class="flex items-center justify-center space-x-3 bg-accent text-primary font-bold py-4 px-6 rounded-lg hover:bg-accent/90 transition-all transform hover:scale-105 shadow-lg">
                   <span class="material-symbols-outlined">location_on</span>
                   <span>Xem Địa Chỉ Ship</span>
                 </button>
@@ -675,9 +675,9 @@ class Router {
                     <span class="material-symbols-outlined text-accent">location_on</span>
                   </div>
                   <div>
-                    <h4 class="font-bold text-lg dark:text-white">Khu Vực Giao Hàng</h4>
-                    <p class="text-gray-600 dark:text-gray-400">Vũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh</p>
-                    <p class="text-xs text-accent italic mt-1">Ship hỏa tốc - Gọi là có liền!</p>
+                    <h4 class="font-bold text-lg dark:text-white">Địa Chỉ Cửa Hàng</h4>
+                    <p class="text-gray-600 dark:text-gray-400">446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu</p>
+                    <p class="text-xs text-accent italic mt-1">Khu vực ship: Vũng Tàu, Bà Rịa, Long Điền, Phước Hải, Phước Tỉnh</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-4">
@@ -704,9 +704,9 @@ class Router {
                     <span class="material-symbols-outlined text-accent">local_shipping</span>
                   </div>
                   <div>
-                    <h4 class="font-bold text-lg dark:text-white">Khu Vực Ship Hàng</h4>
-                    <p class="text-gray-600 dark:text-gray-400">Vũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh</p>
-                    <p class="text-xs text-accent italic mt-1">Ship hỏa tốc - Gọi là có liền!</p>
+                    <h4 class="font-bold text-lg dark:text-white">Địa Chỉ Cửa Hàng</h4>
+                    <p class="text-gray-600 dark:text-gray-400">446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu</p>
+                    <p class="text-xs text-accent italic mt-1">Khu vực ship: Vũng Tàu, Bà Rịa, Long Điền, Phước Hải, Phước Tỉnh</p>
                   </div>
                 </div>
               </div>

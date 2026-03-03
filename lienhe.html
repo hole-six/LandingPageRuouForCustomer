@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Liên Hệ - RƯỢU HỮU TUẤN</title>
+    <title>Liên Hệ - Rượu Jagermeister Vũng Tàu Bà Rịa · 446 Bình Giã, Nguyễn An Ninh</title>
+    <meta name="description" content="Liên hệ đặt hàng Jagermeister tại Vũng Tàu, Bà Rịa. Địa chỉ: 446 Bình Giã, Nguyễn An Ninh, Vũng Tàu. Hotline: 0908 176 387" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap"
@@ -43,10 +44,53 @@
             background-color: rgba(10, 29, 55, 0.9);
         }
     </style>
+    <link href="age-verification.css" rel="stylesheet" />
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark font-sans text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    
+    <!-- Age Verification Modal -->
+    <div id="ageVerificationModal" class="hidden items-center justify-center">
+        <div class="age-modal-content">
+            <h2 class="age-modal-title">HỮU TUẤN KÍNH CHÀO QUÝ KHÁCH!</h2>
+            
+            <p class="age-modal-text">
+                Website là trang giới thiệu sản phẩm, chúng tôi không kinh doanh tại đây.<br>
+                Giá các sản phẩm mang tính tham khảo, vui lòng liên hệ hotline hoặc đến cửa hàng để được tư vấn đặt hàng.
+            </p>
+            
+            <div class="age-icons-container">
+                <div class="age-icon-wrapper">
+                    <div class="age-icon">18+</div>
+                </div>
+            </div>
+            
+            <div class="age-warning-icons">
+                <div class="warning-icon" title="Không lái xe khi uống rượu"></div>
+                <div class="warning-icon" title="Phụ nữ mang thai không nên uống"></div>
+            </div>
+            
+            <p class="age-modal-text" style="font-weight: 600; color: #c5a059;">
+                Các sản phẩm thức uống có cồn không dành cho người chưa đủ 18 tuổi và phụ nữ mang thai.<br>
+                Thưởng thức có trách nhiệm và không lái xe khi đã uống rượu bia.
+            </p>
+            
+            <div class="age-buttons-container">
+                <button id="under18Btn" class="age-btn age-btn-under">
+                    DƯỚI 18 TUỔI
+                </button>
+                <button id="over18Btn" class="age-btn age-btn-over">
+                    TRÊN 18 TUỔI
+                </button>
+            </div>
+            
+            <div class="age-disclaimer">
+                Bằng cách nhấp vào "TRÊN 18 TUỔI", bạn xác nhận rằng bạn đã đủ tuổi hợp pháp để mua và tiêu thụ đồ uống có cồn theo quy định của pháp luật Việt Nam.
+            </div>
+        </div>
+    </div>
+    
     <header class="bg-secondary text-white sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
@@ -211,8 +255,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg dark:text-white">Địa Chỉ Showroom</h4>
-                                <p class="text-gray-600 dark:text-gray-400">123 Đường Rượu Vang, Phường 4, Quận Tân
-                                    Bình, TP. Hồ Chí Minh</p>
+                                <p class="text-gray-600 dark:text-gray-400">446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
@@ -327,7 +370,7 @@
                 <span class="material-symbols-outlined text-2xl mb-1">chat</span>
                 <span class="text-[10px] font-medium">Facebook</span>
             </a>
-            <button onclick="alert('Địa chỉ: Vũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\\n\\nLiên hệ:\\n📞 0908 176 387\\n📘 Facebook: Tuấn\\n\\nShip hỏa tốc full map!')" class="flex flex-col items-center justify-center text-white hover:text-primary transition-colors py-2">
+            <button onclick="alert('Địa chỉ: 446 Bình Giã, Nguyễn An Ninh, Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam\\n\\nLiên hệ:\\n📞 0908 176 387\\n📘 Facebook: Tuấn\\n\\nShip hỏa tốc full map!')" class="flex flex-col items-center justify-center text-white hover:text-primary transition-colors py-2">
                 <span class="material-symbols-outlined text-2xl mb-1">location_on</span>
                 <span class="text-[10px] font-medium">Địa điểm</span>
             </button>
@@ -356,6 +399,7 @@
             }
         })();
     </script>
+    <script src="age-verification.js"></script>
 
 </body>
 

@@ -1,0 +1,231 @@
+/* Age Verification Modal Styles */
+#ageVerificationModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 25, 55, 0.98);
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+}
+
+.age-modal-content {
+    max-width: 600px;
+    width: 90%;
+    background: linear-gradient(135deg, #0a192f 0%, #1a2f4f 100%);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(197, 160, 89, 0.3);
+    animation: modalFadeIn 0.5s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.age-modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.age-modal-text {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.age-icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.age-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.age-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(197, 160, 89, 0.1);
+    border: 3px solid #c5a059;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c5a059;
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.age-warning-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.warning-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(220, 38, 38, 0.1);
+    border: 2px solid rgba(220, 38, 38, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.warning-icon::before {
+    content: '🚫';
+    font-size: 2rem;
+}
+
+.age-buttons-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.age-btn {
+    flex: 1;
+    min-width: 140px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.age-btn-under {
+    background: rgba(197, 160, 89, 0.2);
+    color: #c5a059;
+    border: 2px solid #c5a059;
+}
+
+.age-btn-under:hover {
+    background: rgba(197, 160, 89, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+}
+
+.age-btn-over {
+    background: #c5a059;
+    color: #0a192f;
+    border: 2px solid #c5a059;
+}
+
+.age-btn-over:hover {
+    background: #d4b06a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.4);
+}
+
+.age-disclaimer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(197, 160, 89, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .age-modal-content {
+        padding: 2rem 1.5rem;
+        width: 95%;
+    }
+    
+    .age-modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .age-modal-text {
+        font-size: 0.9rem;
+    }
+    
+    .age-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+    }
+    
+    .warning-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .warning-icon::before {
+        font-size: 1.75rem;
+    }
+    
+    .age-buttons-container {
+        flex-direction: column;
+    }
+    
+    .age-btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .age-icons-container {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .age-modal-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .age-modal-title {
+        font-size: 1.25rem;
+    }
+    
+    .age-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
