@@ -65,6 +65,16 @@
                         <p class="font-bold text-primary">0908 176 387</p>
                     </div>
                     
+                    <!-- Mobile Zalo Button -->
+                    <a href="https://zalo.me/0908176387" target="_blank" class="lg:hidden p-2 hover:bg-primary/10 rounded-full transition-colors">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLgkuNVEqN37yxQ7l9tQ57XNslZR0N132dwjrNlnl8ZFZ_wa-Cl1XGAEEVYFGMTznZ5umKVnOFEy-8O_IMHCwpuO8HLWQG4DDxQutFv6fd3-RRjjaBrRLyd3RyN0KAtOTubO8wOSqjKLVbKfDOngpl43FcM3-2DU2gnVrkmJKY5xS5-4BsMZJkGkjPlwz1B864ATK7RZn0DBehcTHYLeUECBz92gze724-t4TtJB3eGN6gi76N2gV-6k-x9DM-Es1rr9Ax6b4xjlVK" alt="Zalo" class="w-6 h-6">
+                    </a>
+                    
+                    <!-- Mobile Call Button -->
+                    <a href="tel:0908176387" class="lg:hidden p-2 hover:bg-primary/10 rounded-full transition-colors">
+                        <span class="material-symbols-outlined text-2xl text-primary">call</span>
+                    </a>
+                    
                     <!-- Mobile Menu Button -->
                     <button id="menuBtn" class="lg:hidden p-2 hover:bg-primary/10 rounded transition-colors">
                         <span id="menuIcon" class="material-symbols-outlined text-3xl text-primary">menu</span>
@@ -79,7 +89,14 @@
                 <a class="hover:text-primary transition-colors" href="#">Rượu Vang</a>
                 <a class="hover:text-primary transition-colors" href="#">Thương Hiệu</a>
                 <a class="hover:text-primary transition-colors" href="#">Sản Phẩm</a>
-                <a class="text-primary border-b-2 border-primary" href="lienhe.html">Liên Hệ</a>
+                <a class="hover:text-primary transition-colors flex items-center gap-2" href="https://zalo.me/0908176387" target="_blank">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.237.738 4.304 1.986 5.97L2.05 21.95l4.098-1.903C7.813 21.315 9.826 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                    Zalo
+                </a>
+                <a class="hover:text-primary transition-colors flex items-center gap-2" href="tel:0908176387">
+                    <span class="material-symbols-outlined text-sm">call</span>
+                    Gọi
+                </a>
             </nav>
             
             <!-- Mobile Navigation -->
@@ -104,10 +121,6 @@
                     <a class="hover:text-primary transition-colors py-2 px-4 hover:bg-primary/10 rounded" href="#">
                         <span class="material-symbols-outlined text-sm mr-2 align-middle">shopping_bag</span>
                         Sản Phẩm
-                    </a>
-                    <a class="text-primary py-2 px-4 bg-primary/10 rounded font-bold" href="lienhe.html">
-                        <span class="material-symbols-outlined text-sm mr-2 align-middle">contact_mail</span>
-                        Liên Hệ
                     </a>
                     
                     <!-- Mobile Contact -->
@@ -298,32 +311,26 @@
             </div>
         </div>
     </footer>
-    <div id="floating-buttons" class="fixed right-4 bottom-10 z-50 flex flex-col space-y-3">
-        <button id="toggle-floating"
-            class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-            title="Đóng/Mở menu">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-        <div id="floating-menu" class="hidden flex-col space-y-3">
-            <a class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                href="tel:0908176387" title="Gọi: 0908 176 387">
-                <span class="material-symbols-outlined">call</span>
+    
+    <!-- Bottom Navigation Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-secondary border-t-2 border-primary z-50 shadow-2xl md:hidden">
+        <div class="grid grid-cols-4 gap-1 px-2 py-3">
+            <a href="tel:0908176387" class="flex flex-col items-center justify-center text-white hover:text-primary transition-colors py-2">
+                <span class="material-symbols-outlined text-2xl mb-1">call</span>
+                <span class="text-[10px] font-medium">Gọi</span>
             </a>
-            <a class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                href="https://zalo.me/0908176387" target="_blank" title="Zalo: 0908 176 387">
-                <img alt="Zalo" class="w-6 h-6"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLgkuNVEqN37yxQ7l9tQ57XNslZR0N132dwjrNlnl8ZFZ_wa-Cl1XGAEEVYFGMTznZ5umKVnOFEy-8O_IMHCwpuO8HLWQG4DDxQutFv6fd3-RRjjaBrRLyd3RyN0KAtOTubO8wOSqjKLVbKfDOngpl43FcM3-2DU2gnVrkmJKY5xS5-4BsMZJkGkjPlwz1B864ATK7RZn0DBehcTHYLeUECBz92gze724-t4TtJB3eGN6gi76N2gV-6k-x9DM-Es1rr9Ax6b4xjlVK" />
+            <a href="https://zalo.me/0908176387" target="_blank" class="flex flex-col items-center justify-center text-white hover:text-primary transition-colors py-2">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLgkuNVEqN37yxQ7l9tQ57XNslZR0N132dwjrNlnl8ZFZ_wa-Cl1XGAEEVYFGMTznZ5umKVnOFEy-8O_IMHCwpuO8HLWQG4DDxQutFv6fd3-RRjjaBrRLyd3RyN0KAtOTubO8wOSqjKLVbKfDOngpl43FcM3-2DU2gnVrkmJKY5xS5-4BsMZJkGkjPlwz1B864ATK7RZn0DBehcTHYLeUECBz92gze724-t4TtJB3eGN6gi76N2gV-6k-x9DM-Es1rr9Ax6b4xjlVK" alt="Zalo" class="w-6 h-6 mb-1">
+                <span class="text-[10px] font-medium">Zalo</span>
             </a>
-            <a class="w-12 h-12 bg-[#1877f2] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank"
-                title="Facebook: Tuấn">
-                <span class="material-symbols-outlined">chat</span>
+            <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="flex flex-col items-center justify-center text-white hover:text-primary transition-colors py-2">
+                <span class="material-symbols-outlined text-2xl mb-1">chat</span>
+                <span class="text-[10px] font-medium">Facebook</span>
             </a>
-            <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-                class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform border border-slate-200"
-                title="Lên đầu trang">
-                <span class="material-symbols-outlined">expand_less</span>
-            </a>
+            <button onclick="alert('Địa chỉ: Vũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\\n\\nLiên hệ:\\n📞 0908 176 387\\n📘 Facebook: Tuấn\\n\\nShip hỏa tốc full map!')" class="flex flex-col items-center justify-center text-white hover:text-primary transition-colors py-2">
+                <span class="material-symbols-outlined text-2xl mb-1">location_on</span>
+                <span class="text-[10px] font-medium">Địa điểm</span>
+            </button>
         </div>
     </div>
 
@@ -344,29 +351,6 @@
                         menu.classList.add('hidden');
                         icon.textContent = 'menu';
                         document.body.style.overflow = '';
-                    }
-                };
-            }
-        })();
-        
-        // FLOATING BUTTONS
-        (function() {
-            const toggleBtn = document.getElementById('toggle-floating');
-            const floatingMenu = document.getElementById('floating-menu');
-            const icon = toggleBtn.querySelector('span');
-
-            if (toggleBtn && floatingMenu) {
-                toggleBtn.onclick = function() {
-                    if (floatingMenu.classList.contains('hidden')) {
-                        // Mở menu
-                        floatingMenu.classList.remove('hidden');
-                        floatingMenu.classList.add('flex');
-                        icon.textContent = 'close';
-                    } else {
-                        // Đóng menu
-                        floatingMenu.classList.add('hidden');
-                        floatingMenu.classList.remove('flex');
-                        icon.textContent = 'menu';
                     }
                 };
             }

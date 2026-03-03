@@ -116,24 +116,24 @@ const PRODUCTS_DATA = {
       ]
     },
     {
-      id: 'deer-pourer',
-      name: 'Đầu Hươu Jagermeister',
+      id: 'jager-pourer',
+      name: 'Vòi Rót Rượu Jagermeister',
       category: 'accessories',
       price: 90000,
       image: 'images/dauhuou.jpg',
-      rating: 4.9,
-      reviews: 67,
+      rating: 4.8,
+      reviews: 52,
       origin: 'Phụ kiện chính hãng',
       volume: 'N/A',
       alcohol: 'N/A',
       status: 'Còn hàng',
-      description: 'Đầu hươu Jagermeister là phụ kiện đặc biệt không thể thiếu của Fan rượu thảo mộc từ Đức. Chất liệu hợp kim kẽm cao cấp, nút đậy cao su, kích thước miệng chai phù hợp 18-22mm. Phù hợp với rượu Jagermeister 700ml và 1000ml, hoặc rượu vang.',
+      description: 'Vòi rót rượu Jagermeister - một phụ kiện đặc biệt không thể thiếu của Fan rượu thảo mộc từ Đức này. Chất liệu hợp kim kẽm, nút đậy cao su, kích thước miệng chai phù hợp 18-22mm. Phù hợp với rượu Jagermeister 700ml và 1000ml, hoặc rượu vang.',
       features: [
         'Chất liệu: Hợp kim kẽm',
         'Nút đậy: Cao su',
         'Kích thước miệng chai: 18-22mm',
         'Phù hợp với chai 700ml và 1000ml',
-        'Thiết kế biểu tượng đầu hươu'
+        'Rót rượu chính xác và tiện lợi'
       ]
     },
     {
@@ -158,24 +158,94 @@ const PRODUCTS_DATA = {
       ]
     },
     {
-      id: 'jager-pourer',
-      name: 'Vòi Rót Rượu Jagermeister',
-      category: 'accessories',
-      price: 90000,
-      image: 'images/dauhuou.jpg',
-      rating: 4.8,
-      reviews: 52,
-      origin: 'Phụ kiện chính hãng',
-      volume: 'N/A',
-      alcohol: 'N/A',
+      id: 'cointreau',
+      name: 'Rượu Cointreau',
+      category: 'wines',
+      price: 500000,
+      image: 'images/cointreau.jpg',
+      rating: 4.9,
+      reviews: 78,
+      origin: 'Pháp',
+      volume: '700ml',
+      alcohol: '40%',
       status: 'Còn hàng',
-      description: 'Vòi rót rượu Jagermeister - một phụ kiện đặc biệt không thể thiếu của Fan rượu thảo mộc từ Đức này. Chất liệu hợp kim kẽm, nút đậy cao su, kích thước miệng chai phù hợp 18-22mm. Phù hợp với rượu Jagermeister 700ml và 1000ml, hoặc rượu vang.',
+      description: 'Cointreau là một loại rượu mùi cam nổi tiếng của Pháp. Được làm từ vỏ cam ngọt và cam đắng, mặc dù chai có màu nâu nhưng rượu bên trong trong suốt. Đây là loại rượu khá đa năng, thường có trong các quầy bar.',
       features: [
-        'Chất liệu: Hợp kim kẽm',
-        'Nút đậy: Cao su',
-        'Kích thước miệng chai: 18-22mm',
-        'Phù hợp với chai 700ml và 1000ml',
-        'Rót rượu chính xác và tiện lợi'
+        'Xuất xứ: Pháp - Chính hãng 100%',
+        'Nồng độ: 40%',
+        'Thành phần: vỏ cam ngọt và cam đắng',
+        'Rượu trong suốt',
+        'Pha cocktail: Margarita, Cosmopolitan, Sidecar',
+        'Uống với đá hoặc dùng trong làm bánh'
+      ]
+    },
+    {
+      id: 'baileys',
+      name: 'Rượu Baileys',
+      category: 'wines',
+      price: 540000,
+      image: 'images/baileys.jpg',
+      rating: 4.8,
+      reviews: 92,
+      origin: 'Ireland',
+      volume: '700ml',
+      alcohol: '17%',
+      status: 'Còn hàng',
+      description: 'Baileys The Original Irish Cream là loại rượu kem rất nổi tiếng. Được làm từ rượu whisky Ireland, kem sữa và cacao. Hương vị béo, ngọt, dễ uống, hơi giống sữa socola pha rượu. Nhẹ hơn so với Cointreau, phù hợp người mới.',
+      features: [
+        'Xuất xứ: Ireland - Chính hãng 100%',
+        'Nồng độ: 17% (nhẹ hơn)',
+        'Thành phần: whisky Ireland + kem sữa + cacao',
+        'Hương vị: béo, ngọt, dễ uống',
+        'Uống lạnh hoặc thêm đá',
+        'Pha với cà phê rất ngon',
+        'Làm cocktail hoặc đổ lên kem, bánh'
+      ]
+    },
+    {
+      id: 'kahlua',
+      name: 'Rượu Kahlúa The Original Coffee Liqueur',
+      category: 'wines',
+      price: 490000,
+      image: 'images/kahlua.jpg',
+      rating: 4.7,
+      reviews: 85,
+      origin: 'Mexico',
+      volume: '700ml',
+      alcohol: '20%',
+      status: 'Còn hàng',
+      description: 'Kahlúa The Original Coffee Liqueur là loại rượu mùi cà phê rất nổi tiếng của Mexico. Được làm từ cà phê Arabica, rum và đường. Hương vị ngọt, đậm mùi cà phê, hơi giống cà phê sữa có cồn.',
+      features: [
+        'Xuất xứ: Mexico - Chính hãng 100%',
+        'Nồng độ: 20%',
+        'Thành phần: cà phê Arabica + rum + đường',
+        'Hương vị: ngọt, đậm mùi cà phê',
+        'Uống với đá',
+        'Pha với sữa rất dễ uống',
+        'Pha cocktail: White Russian, Black Russian, Espresso Martini'
+      ]
+    },
+    {
+      id: 'combo-b52',
+      name: 'Combo 3 Chai Cocktail B52',
+      category: 'gift-sets',
+      price: 1430000,
+      image: 'images/combo3.jpg',
+      rating: 5.0,
+      reviews: 64,
+      origin: 'Combo Quốc Tế',
+      volume: '3 x 700ml',
+      alcohol: 'Hỗn hợp',
+      status: 'Còn hàng',
+      description: 'B52 (B-52 shot) là một loại cocktail dạng shot rất nổi tiếng, gồm 3 lớp rượu xếp tầng đẹp mắt. Combo bao gồm: Kahlúa (tầng dưới - cà phê ngọt), Baileys (tầng giữa - béo mịn), Cointreau (tầng trên - hơi gắt, thơm cam). Tổng thể: ngọt – béo – thơm – mạnh dần, rất dễ nghiện.',
+      features: [
+        'Combo 3 chai: Kahlúa + Baileys + Cointreau',
+        'Làm cocktail B52 chuyên nghiệp',
+        'Hướng dẫn pha chế kèm theo',
+        'Rót chậm qua muỗng để tạo lớp đẹp',
+        'Uống trực tiếp (shot) hoặc đốt lớp trên',
+        'Tiết kiệm hơn mua lẻ',
+        'Hoàn hảo cho tiệc tùng'
       ]
     }
   ],

@@ -148,26 +148,26 @@ class Router {
           <p>© 2025 Hữu Tuấn - Jagermeister Chính Hãng. Ship hỏa tốc Vũng Tàu, Bà Rịa, Long Điền. Rượu không dành cho người dưới 18 tuổi.</p>
         </div>
       </footer>
-      <div id="floating-buttons" class="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col space-y-4 z-40 transition-all duration-300">
-        <button id="toggle-floating" class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg" title="Đóng/Mở menu">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
-        <div id="floating-menu" class="hidden flex-col space-y-4">
-          <a href="https://zalo.me/0356781839" target="_blank" class="w-12 h-12 bg-[#0068ff] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Zalo: 0356 781 839">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg==" alt="zalo">
-            </a>
-          <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="w-12 h-12 bg-[#1877f2] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Facebook: Tuấn">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      
+      <!-- Bottom Navigation Bar -->
+      <div class="fixed bottom-0 left-0 right-0 bg-primary border-t-2 border-accent z-50 shadow-2xl md:hidden">
+        <div class="grid grid-cols-4 gap-1 px-2 py-3">
+          <a href="tel:0356781839" class="flex flex-col items-center justify-center text-white hover:text-accent transition-colors py-2">
+            <span class="material-symbols-outlined text-2xl mb-1">call</span>
+            <span class="text-[10px] font-medium">Gọi</span>
           </a>
-          <a href="tel:0356781839" class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" title="Gọi: 0356 781 839">
-            <span class="material-symbols-outlined">call</span>
+          <a href="https://zalo.me/0356781839" target="_blank" class="flex flex-col items-center justify-center text-white hover:text-accent transition-colors py-2">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg==" alt="Zalo" class="w-6 h-6 mb-1">
+            <span class="text-[10px] font-medium">Zalo</span>
           </a>
-          <button onclick="alert('JAGERMEISTER – SHIP HỎA TỐC FULL MAP\\n\\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\\n\\nLiên hệ:\\n📞 Zalo/SĐT: 0356 781 839\\n📘 Facebook: Tuấn\\n\\nGọi ngay để được tư vấn và giao hàng nhanh!')" class="w-12 h-12 bg-primary border border-accent/30 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg group">
-            <span class="material-symbols-outlined group-hover:text-accent">location_on</span>
+          <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="flex flex-col items-center justify-center text-white hover:text-accent transition-colors py-2">
+            <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span class="text-[10px] font-medium">Facebook</span>
+          </a>
+          <button onclick="alert('JAGERMEISTER – SHIP HỎA TỐC FULL MAP\\n\\nVũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh\\n\\nLiên hệ:\\n📞 Zalo/SĐT: 0356 781 839\\n📘 Facebook: Tuấn\\n\\nGọi ngay để được tư vấn và giao hàng nhanh!')" class="flex flex-col items-center justify-center text-white hover:text-accent transition-colors py-2">
+            <span class="material-symbols-outlined text-2xl mb-1">location_on</span>
+            <span class="text-[10px] font-medium">Địa điểm</span>
           </button>
-          <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary hover:scale-110 transition-transform shadow-lg border border-slate-200">
-            <span class="material-symbols-outlined">expand_less</span>
-          </a>
         </div>
       </div>
     `;
@@ -202,7 +202,7 @@ class Router {
           <div class="space-y-8 animate-fade-in-up">
      
             <h2 class="text-6xl md:text-7xl font-display text-white leading-tight">
-              Hương Vị <br /> <span class="italic text-accent">Huyền Bí</span>
+             Rượu Jagermeister <br /> <span class="italic text-accent"> Vũng Tàu</span>
             </h2>
             <p class="text-white/70 text-lg max-w-md leading-relaxed border-l-2 border-accent pl-6">
               JAGERMEISTER – SHIP HỎA TỐC FULL MAP Vũng Tàu – Bà Rịa – Long Điền – Phước Hải – Phước Tỉnh. Gọi là có liền! Không cần chờ đợi, chỉ cần một cú alo/Zalo 0356.781.839, rượu Đức chuẩn vị thảo mộc đã có mặt trên bàn nhậu.
@@ -211,7 +211,7 @@ class Router {
               <button onclick="scrollToSection('san-pham')" class="w-full sm:w-auto bg-accent text-primary px-10 py-4 font-bold tracking-widest hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl rounded">
                 MUA NGAY
               </button>
-              <a href="lienhe.html" class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-10 py-4 font-bold tracking-widest hover:bg-white/10 transition-all inline-block rounded">
+              <a href="https://www.facebook.com/profile.php?id=61571109679044" target="_blank" class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-10 py-4 font-bold tracking-widest hover:bg-white/10 transition-all inline-block rounded">
                 LIÊN HỆ
               </a>
             </div>
@@ -284,17 +284,50 @@ class Router {
             <div class="w-16 h-1 bg-accent mx-auto mb-6"></div>
             <p class="text-slate-600 dark:text-slate-400">Những khoảnh khắc tuyệt vời cùng Jagermeister</p>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer">
-              <img alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback7.jpg" />
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback1.jpg" />
             </div>
-            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer">
-              <img alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback8.jpg" />
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback2.jpg" />
             </div>
-            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer">
-              <img alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback9.jpg" />
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback3.jpg" />
             </div>
-            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer bg-primary flex items-center justify-center">
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback4.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback5.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback6.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 7" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback7.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback8.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 9" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback9.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 10" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback10.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 11" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback11.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 12" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback12.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 13" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback13.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow">
+              <img alt="Gallery 14" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback14.jpg" />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer bg-primary flex items-center justify-center shadow-lg hover:shadow-2xl transition-shadow">
               <div class="text-center text-white p-6">
                 <span class="material-symbols-outlined text-5xl text-accent mb-4 block">photo_camera</span>
                 <p class="font-bold text-lg mb-2">1000+</p>
@@ -406,6 +439,86 @@ class Router {
                 </div>
                 <p class="text-white/80 text-sm italic mb-3">"Mua làm quà tặng sếp, được khen ngợi hết lời. Sẽ quay lại ủng hộ!"</p>
                 <p class="text-accent font-semibold text-sm">Chị Hương - Bà Rịa</p>
+              </div>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 group">
+              <div class="aspect-square overflow-hidden">
+                <img alt="Feedback khách hàng 7" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback10.jpg" />
+              </div>
+              <div class="p-6">
+                <div class="flex text-accent mb-3">
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                </div>
+                <p class="text-white/80 text-sm italic mb-3">"Rượu ngon, giá hợp lý. Giao hàng nhanh chóng, đóng gói cẩn thận!"</p>
+                <p class="text-accent font-semibold text-sm">Anh Phong - Vũng Tàu</p>
+              </div>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 group">
+              <div class="aspect-square overflow-hidden">
+                <img alt="Feedback khách hàng 8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback11.jpg" />
+              </div>
+              <div class="p-6">
+                <div class="flex text-accent mb-3">
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                </div>
+                <p class="text-white/80 text-sm italic mb-3">"Chất lượng tuyệt vời, sẽ giới thiệu cho bạn bè. Cảm ơn shop!"</p>
+                <p class="text-accent font-semibold text-sm">Anh Dũng - Long Điền</p>
+              </div>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 group">
+              <div class="aspect-square overflow-hidden">
+                <img alt="Feedback khách hàng 9" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback12.jpg" />
+              </div>
+              <div class="p-6">
+                <div class="flex text-accent mb-3">
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                </div>
+                <p class="text-white/80 text-sm italic mb-3">"Đóng gói đẹp, phù hợp làm quà. Giá cả phải chăng, uy tín!"</p>
+                <p class="text-accent font-semibold text-sm">Chị Mai - Phước Hải</p>
+              </div>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 group">
+              <div class="aspect-square overflow-hidden">
+                <img alt="Feedback khách hàng 10" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback13.jpg" />
+              </div>
+              <div class="p-6">
+                <div class="flex text-accent mb-3">
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                </div>
+                <p class="text-white/80 text-sm italic mb-3">"Hàng chính hãng, vị ngon đúng chuẩn. Sẽ mua tiếp ở shop!"</p>
+                <p class="text-accent font-semibold text-sm">Anh Tâm - Bà Rịa</p>
+              </div>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 group">
+              <div class="aspect-square overflow-hidden">
+                <img alt="Feedback khách hàng 11" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="images/feedback14.jpg" />
+              </div>
+              <div class="p-6">
+                <div class="flex text-accent mb-3">
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                  <span class="material-symbols-outlined text-sm">star</span>
+                </div>
+                <p class="text-white/80 text-sm italic mb-3">"Tuyệt vời! Giao hàng siêu nhanh, rượu ngon. Rất hài lòng!"</p>
+                <p class="text-accent font-semibold text-sm">Anh Hoàng - Phước Tỉnh</p>
               </div>
             </div>
           </div>
@@ -681,77 +794,6 @@ window.addEventListener('load', () => {
       const btn = document.getElementById('menuBtn');
       if (btn) {
         setupMenu();
-      }
-    });
-    
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-  }
-})();
-
-// FLOATING BUTTONS TOGGLE - Đơn giản nhất
-(function initFloatingButtons() {
-  function setupFloatingButtons() {
-    const toggleBtn = document.getElementById('toggle-floating');
-    const floatingMenu = document.getElementById('floating-menu');
-    
-    if (toggleBtn && floatingMenu) {
-      const icon = toggleBtn.querySelector('span');
-      
-      // Xóa event cũ nếu có
-      toggleBtn.onclick = null;
-      toggleBtn.ontouchend = null;
-      
-      function toggleMenu(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        if (floatingMenu.classList.contains('hidden')) {
-          // Mở menu
-          floatingMenu.classList.remove('hidden');
-          floatingMenu.classList.add('flex');
-          if (icon) icon.textContent = 'close';
-        } else {
-          // Đóng menu
-          floatingMenu.classList.add('hidden');
-          floatingMenu.classList.remove('flex');
-          if (icon) icon.textContent = 'menu';
-        }
-      }
-      
-      // Hỗ trợ cả click và touch
-      toggleBtn.onclick = toggleMenu;
-      toggleBtn.ontouchend = toggleMenu;
-    }
-  }
-  
-  // Setup ngay lập tức
-  setupFloatingButtons();
-  
-  // Setup sau khi DOM load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupFloatingButtons);
-  }
-  
-  // Setup lại nhiều lần để đảm bảo
-  setTimeout(setupFloatingButtons, 100);
-  setTimeout(setupFloatingButtons, 300);
-  setTimeout(setupFloatingButtons, 500);
-  setTimeout(setupFloatingButtons, 1000);
-  
-  // Setup lại mỗi khi route thay đổi
-  window.addEventListener('popstate', () => {
-    setTimeout(setupFloatingButtons, 300);
-  });
-  
-  // Quan sát DOM để setup khi element xuất hiện
-  if (typeof MutationObserver !== 'undefined') {
-    const observer = new MutationObserver(() => {
-      const toggleBtn = document.getElementById('toggle-floating');
-      if (toggleBtn) {
-        setupFloatingButtons();
       }
     });
     
