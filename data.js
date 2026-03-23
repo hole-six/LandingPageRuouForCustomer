@@ -56,7 +56,7 @@ const PRODUCTS_DATA = {
       id: 'jager-1000ml-35',
       name: 'RƯỢU THẢO MỘC JAGERMEISTER 1000ML 35%',
       category: 'jager-classic',
-      price: 550000,
+      price: 530000,
       image: 'images/ruou100ml.jpg',
       rating: 4.8,
       reviews: 156,
@@ -77,7 +77,7 @@ const PRODUCTS_DATA = {
       id: 'jager-700ml-35',
       name: 'RƯỢU THẢO MỘC JAGERMEISTER 700ML 35%',
       category: 'jager-classic',
-      price: 450000,
+      price: 430000,
       image: 'images/ruou700ml.jpg',
       rating: 4.7,
       reviews: 203,
@@ -272,7 +272,7 @@ const PRODUCTS_DATA = {
     {
       name: 'Anh Hùng - Phước Hải',
       rating: 5,
-      comment: 'Giá 700ml chỉ 450K, 1000ml 550K quá hời. Pha Redbull quẩy hết nấc!',
+      comment: 'Giá 700ml chỉ 430K, 1000ml 530K quá hời. Pha Redbull quẩy hết nấc!',
       date: '2025-02-15'
     }
   ]
