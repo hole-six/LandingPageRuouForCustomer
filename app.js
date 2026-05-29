@@ -14,9 +14,10 @@ class Router {
     window.addEventListener('popstate', () => this.handleRoute());
     document.addEventListener('DOMContentLoaded', () => this.handleRoute());
     document.addEventListener('click', (e) => {
-      if (e.target.matches('[data-link]')) {
+      const link = e.target.closest('[data-link]');
+      if (link) {
         e.preventDefault();
-        this.navigate(e.target.getAttribute('href'));
+        this.navigate(link.getAttribute('href'));
       }
     });
   }
@@ -160,7 +161,7 @@ class Router {
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg==" alt="Zalo" class="w-6 h-6 mb-1">
             <span class="text-[10px] font-medium">Zalo</span>
           </a>
-          <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="flex flex-col items-center justify-center text-white hover:text-accent transition-colors py-2">
+          <a href="https://www.facebook.com/caythue247?mibextid=wwXIfr&rdid=m3F4nhYG2yHVMXy9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14f1v9cEXJ3%2F%3Fmibextid%3DwwXIfr" target="_blank" class="flex flex-col items-center justify-center text-white hover:text-accent transition-colors py-2">
             <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             <span class="text-[10px] font-medium">Facebook</span>
           </a>
@@ -211,7 +212,7 @@ class Router {
               <button onclick="scrollToSection('san-pham')" class="w-full sm:w-auto bg-accent text-primary px-10 py-4 font-bold tracking-widest hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl rounded">
                 MUA NGAY
               </button>
-              <a href="https://www.facebook.com/profile.php?id=61571109679044" target="_blank" class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-10 py-4 font-bold tracking-widest hover:bg-white/10 transition-all inline-block rounded">
+              <a href="https://www.facebook.com/caythue247?mibextid=wwXIfr&rdid=m3F4nhYG2yHVMXy9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14f1v9cEXJ3%2F%3Fmibextid%3DwwXIfr" target="_blank" class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-10 py-4 font-bold tracking-widest hover:bg-white/10 transition-all inline-block rounded">
                 LIÊN HỆ
               </a>
             </div>
@@ -593,7 +594,7 @@ class Router {
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.237.738 4.304 1.986 5.97L2.05 21.95l4.098-1.903C7.813 21.315 9.826 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
                   <span>Zalo: 0356 781 839</span>
                 </a>
-                <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="flex items-center justify-center space-x-3 bg-[#1877f2] text-white font-bold py-4 px-6 rounded-lg hover:bg-[#145dbf] transition-all transform hover:scale-105 shadow-lg">
+                <a href="https://www.facebook.com/caythue247?mibextid=wwXIfr&rdid=m3F4nhYG2yHVMXy9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14f1v9cEXJ3%2F%3Fmibextid%3DwwXIfr" target="_blank" class="flex items-center justify-center space-x-3 bg-[#1877f2] text-white font-bold py-4 px-6 rounded-lg hover:bg-[#145dbf] transition-all transform hover:scale-105 shadow-lg">
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                   <span>Facebook: Tuấn</span>
                 </a>
@@ -696,7 +697,7 @@ class Router {
                   </div>
                   <div>
                     <h4 class="font-bold text-lg dark:text-white">Facebook</h4>
-                    <a href="https://www.facebook.com/share/1FRKNhXwZX/?mibextid=wwXIfr" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-accent">Tuấn - Jagermeister Vũng Tàu</a>
+                    <a href="https://www.facebook.com/caythue247?mibextid=wwXIfr&rdid=m3F4nhYG2yHVMXy9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14f1v9cEXJ3%2F%3Fmibextid%3DwwXIfr" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-accent">Tuấn - Jagermeister Vũng Tàu</a>
                   </div>
                 </div>
                 <div class="flex items-start space-x-4">
